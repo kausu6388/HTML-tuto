@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-Book | Checkout</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:"Poppins",sans-serif}
+    body{
+      background:linear-gradient(135deg,#43cea2,#185a9d);
+      color:#fff;
+    }
+
+    /* Navbar */
+    nav{
+      display:flex;justify-content:space-between;align-items:center;
+      background:rgba(255,255,255,0.1);
+      backdrop-filter:blur(8px);
+      padding:15px 60px;
+      position:sticky;top:0;z-index:10;
+    }
+    nav h1{color:#ffeb3b;font-size:26px}
+    nav ul{display:flex;list-style:none;gap:20px}
+    nav ul li a{text-decoration:none;color:white;transition:0.3s}
+    nav ul li a:hover{color:#ffeb3b}
+
+    /* Checkout Form */
+    .checkout-container{
+      max-width:700px;
+      margin:50px auto;
+      background:rgba(255,255,255,0.15);
+      border-radius:20px;
+      padding:40px;
+      box-shadow:0 0 15px rgba(0,0,0,0.2);
+    }
+    h2{text-align:center;color:#ffeb3b;margin-bottom:20px}
+    form{display:flex;flex-direction:column;gap:15px}
+
+    label{font-weight:bold}
+    input,select,textarea{
+      padding:10px;
+      border:none;
+      border-radius:8px;
+      outline:none;
+      background:rgba(255,255,255,0.9);
+      font-size:15px;
+      color:#000;
+    }
+
+    textarea{resize:none;height:80px}
+
+    .payment-method{
+      display:flex;
+      gap:10px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+    .payment-method label{
+      font-weight:normal;
+    }
+
+    .btn{
+      background:#ffeb3b;
+      color:#000;
+      border:none;
+      padding:12px 20px;
+      font-weight:bold;
+      border-radius:25px;
+      cursor:pointer;
+      transition:0.3s;
+      margin-top:10px;
+    }
+    .btn:hover{
+      background:white;
+      transform:scale(1.05);
+    }
+
+    .success-message{
+      display:none;
+      text-align:center;
+      color:#00ffb7;
+      margin-top:20px;
+      font-size:18px;
+    }
+
+    footer{text-align:center;padding:20px;background:rgba(255,255,255,0.1)}
+  </style>
+</head>
+<body>
+
+  <nav>
+    <h1>E-Book</h1>
+    <ul>
+      <li><a href="e-book.html">Home</a></li>
+      <li><a href="prodcut.html">Products</a></li>
+      <li><a href="card.html">Cart</a></li>
+    </ul>
+  </nav>
+
+  <div class="checkout-container">
+    <h2>Checkout</h2>
+    <form id="checkoutForm" onsubmit="return placeOrder()">
+      <label>Full Name:</label>
+      <input type="text" id="name" placeholder="Enter your full name" required>
+
+      <label>Email:</label>
+      <input type="email" id="email" placeholder="Enter your email" required>
+
+      <label>Phone:</label>
+      <input type="tel" id="phone" placeholder="Enter your phone number" required>
+
+      <label>Delivery Address:</label>
+      <textarea id="address" placeholder="Enter complete delivery address" required></textarea>
+
+      <label>City:</label>
+      <input type="text" id="city" placeholder="Enter city name" required>
+
+      <label>Pin Code:</label>
+      <input type="number" id="pincode" placeholder="Enter area pincode" required>
+
+      <label>Payment Method:</label>
+      <div class="payment-method">
+        <input type="radio" id="cod" name="payment" value="COD" required>
+        <label for="cod">Cash on Delivery</label>
+        <input type="radio" id="upi" name="payment" value="UPI">
+        <label for="upi">UPI</label>
+        <input type="radio" id="card" name="payment" value="Card">
+        <label for="card">Credit/Debit Card</label>
+      </div>
+
+      <button class="btn" type="submit">Place Order</button>
+      <p class="success-message" id="successMsg">🎉 Order placed successfully! Thank you for shopping with E-Book.</p>
+    </form>
+  </div>
+
+  <footer>
+    <p>© 2025 E-Book | Smart Online Store for Students</p>
+  </footer>
+
+  <script>
+    function placeOrder(){
+      const name = document.getElementById("name").value.trim();
+      const address = document.getElementById("address").value.trim();
+
+      if(name==="" || address===""){
+        alert("Please fill all required fields!");
+        return false;
+      }
+      document.getElementById("successMsg").style.display="block";
+      setTimeout(()=>window.location.href="index.html",2500);
+      return false;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Book | Student Essentials</title>
+ 
+  <style>
+    /* Reset + Global */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, #4b6cb7, #182848);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    /* Navbar */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 60px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(8px);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    nav h1 {
+      font-size: 28px;
+      color: #ffeb3b;
+      font-weight: 700;
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 25px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+    nav ul li a:hover {
+      color: #ffeb3b;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      margin: 40px 60px;
+    }
+    .hero h2 {
+      font-size: 40px;
+      margin-bottom: 15px;
+      color: #ffeb3b;
+    }
+    .hero p {
+      font-size: 18px;
+      max-width: 700px;
+      margin: 0 auto 30px;
+    }
+    .hero button {
+      background: #ffeb3b;
+      color: #000;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .hero button:hover {
+      background: white;
+      color: #182848;
+      transform: scale(1.05);
+    }
+
+    /* Category Section */
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      padding: 40px 60px;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 15px;
+      text-align: center;
+      padding: 25px;
+      transition: 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      background: rgba(255, 255, 255, 0.25);
+    }
+    .card h3 {
+      color: #ffeb3b;
+      margin-bottom: 10px;
+    }
+    .card p {
+      font-size: 15px;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #ffeb3b;
+      color: #000;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: white;
+      color: #2575fc;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: rgba(255, 255, 255, 0.1);
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <h1>E-Book</h1>
+    <ul>
+      <li><a href="#books">Books</a></li>
+      <li><a href="#stationery">Stationery</a></li>
+      <li><a href="#essentials">Essentials</a></li>
+      <li><a href="#combos">Combos</a></li>
+      <li><a href="#">Login</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>Welcome to E-Book</h2>
+    <p>Your one-stop online store for all school essentials — from Nursery to 12th! Explore books, stationery, bags, and exciting combo offers.</p>
+    <button onclick="alert('Coming Soon! 🚀')">Shop Now</button>
+  </section>
+
+  <!-- Category Section -->
+  <section class="categories">
+    <div class="card" id="books">
+      <h3>Books Section</h3>
+      <p>NCERTs, Textbooks, and English novels — all in one place.</p>
+      <a href="#" class="btn">Explore</a>
+    </div>
+    <div class="card" id="stationery">
+      <h3>Stationery</h3>
+      <p>Pens, pencils, geometry boxes, colors, and more.</p>
+      <a href="#" class="btn">Shop Now</a>
+    </div>
+    <div class="card" id="essentials">
+      <h3>School Essentials</h3>
+      <p>School bags, bottles, and pouches for every student.</p>
+      <a href="#" class="btn">View</a>
+    </div>
+    <div class="card" id="combos">
+      <h3>Combo Offers</h3>
+      <p>Exciting study packs with notebooks and gel pens.</p>
+      <a href="#" class="btn">Grab Offer</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 E-Book. All Rights Reserved. | Designed by Kaushlendra Thakur</p>
+  </footer>
+
+</body>
+</html>
