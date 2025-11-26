@@ -1,111 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Technical Documentation Page</title>
-    <link rel="stylesheet" href="web.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Palindrome Checker</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav id="navbar">
-        <header>Technical Docs</header>
-        <a class="nav-link" href="#Build_a_Technical_Documentation_Page">Build a Technical Documentation Page</a>
-        <a class="nav-link" href="#JavaScript_and_Java">JavaScript and Java</a>
-        <a class="nav-link" href="#HTML_and_CSS">HTML and CSS</a>
-        <a class="nav-link" href="#APIs_and_JSON">APIs and JSON</a>
-        <a class="nav-link" href="#Web_Development_Tools">Web Development Tools</a>
-    </nav>
-
-    <main id="main-doc">
-        <section id="Build_a_Technical_Documentation_Page" class="main-section">
-            <header>Build a Technical Documentation Page</header>
-            <p>This project aims to build a documentation page similar to FreeCodeCamp's template.</p>
-            <p>You'll create sections, links, and navigation to showcase technical topics clearly.</p>
-            <p>The page will be responsive and accessible.</p>
-            <p>It should pass all validation tests specified by FreeCodeCamp.</p>
-            <p>Each section must be easy to navigate through the navbar.</p>
-            <code>Example code block for reference.</code>
-            <code>Another code example here.</code>
-            <li>Requirement item 1</li>
-            <li>Requirement item 2</li>
-            <li>Requirement item 3</li>
-        </section>
-
-        <section id="JavaScript_and_Java" class="main-section">
-            <header>JavaScript and Java</header>
-            <p>JavaScript is an interpreted programming language for the web.</p>
-            <p>Java is a compiled language with extensive libraries.</p>
-            <p>Both have unique syntax and use-cases.</p>
-            <p>JavaScript powers dynamic websites and applications.</p>
-            <p>Java is widely used in enterprise solutions.</p>
-            <code>console.log("Hello World!");</code>
-            <code>var x = 10;</code>
-            <code>let y = 20;</code>
-            <code>function test() {}</code>
-            <code>alert("Test");</code>
-            <li>Item one</li>
-            <li>Item two</li>
-            <li>Item three</li>
-            <li>Item four</li>
-            <li>Item five</li>
-        </section>
-
-        <section id="HTML_and_CSS" class="main-section">
-            <header>HTML and CSS</header>
-            <p>HTML structures web content using tags.</p>
-            <p>CSS styles the appearance of web pages.</p>
-            <p>Both are essential for front-end development.</p>
-            <p>CSS includes properties like color, padding, and layout.</p>
-            <p>HTML defines the structure and semantics.</p>
-            <code>&lt;div&gt;Example&lt;/div&gt;</code>
-            <code>body { background: #fff; }</code>
-            <code>h1 { font-size: 2em; }</code>
-            <code>p { margin: 10px; }</code>
-            <code>a { text-decoration: none; }</code>
-            <li>List item A</li>
-            <li>List item B</li>
-            <li>List item C</li>
-            <li>List item D</li>
-            <li>List item E</li>
-        </section>
-
-        <section id="APIs_and_JSON" class="main-section">
-            <header>APIs and JSON</header>
-            <p>APIs allow interaction between software applications.</p>
-            <p>JSON is a lightweight data interchange format.</p>
-            <p>JSON is easy to read and write.</p>
-            <p>APIs use JSON for communication between clients and servers.</p>
-            <p>Proper API design ensures efficiency and scalability.</p>
-            <code>{ "name": "John", "age": 30 }</code>
-            <code>fetch("url").then(response => response.json())</code>
-            <code>const data = {...}</code>
-            <code>return data;</code>
-            <code>console.log(data);</code>
-            <li>Data structure one</li>
-            <li>Data structure two</li>
-            <li>Data structure three</li>
-            <li>Data structure four</li>
-            <li>Data structure five</li>
-        </section>
-
-        <section id="Web_Development_Tools" class="main-section">
-            <header>Web Development Tools</header>
-            <p>Modern tools help streamline development workflows.</p>
-            <p>Version control like Git keeps track of changes.</p>
-            <p>Package managers like npm help manage dependencies.</p>
-            <p>Task runners automate repetitive tasks.</p>
-            <p>Debugging tools enhance error tracking and performance.</p>
-            <code>npm install package</code>
-            <code>git commit -m "message"</code>
-            <code>webpack --config</code>
-            <code>eslint .</code>
-            <code>node app.js</code>
-            <li>Tool A</li>
-            <li>Tool B</li>
-            <li>Tool C</li>
-            <li>Tool D</li>
-            <li>Tool E</li>
-        </section>
-    </main>
+  <h1>Palindrome Checker</h1>
+  <div class="container">
+    <input id="text-input" type="text" placeholder="Enter text here">
+    <br>
+    <button id="check-btn">Check</button>
+    <p id="result"></p>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
+
+
